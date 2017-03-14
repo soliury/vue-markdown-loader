@@ -8,23 +8,27 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
-  resolveLoader: {
-    root: path.join(__dirname, '../node_modules'),
-  },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.vue$/,
-        loader: 'vue'
+        use: [{
+          loader: 'vue-loader',
+          options: {
+            loaders: {
+              scss: 'vue-style-loader!css-loader!sass-loader'
+            }
+          }
+        }]
       },
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         exclude: /node_modules/
       },
       {
         test: /\.css$/,
-        loader: 'style!css'
+        loader: 'css-loader'
       },
       {
         test: /\.md$/,
@@ -32,19 +36,16 @@ module.exports = {
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
-        loader: 'file'
+        loader: 'file-loader'
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?\S*)?$/,
-        loader: 'file',
+        loader: 'file-loader',
         query: {
           name: '[name].[ext]?[hash]'
         }
       }
     ]
-  },
-  babel: {
-    presets: ['es2015']
   },
   devServer: {
     historyApiFallback: true,
