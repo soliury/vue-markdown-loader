@@ -4,7 +4,8 @@
   "description": "markdown file to vue component loader.",
   "main": "index.js",
   "scripts": {
-    "dev": "cd example && webpack-dev-server --hot"
+    "dev": "cd example && webpack-dev-server --hot",
+    "p": "npm publish --registry=https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,7 @@
   "dependencies": {
     "cheerio": "^0.20.0",
     "highlight.js": "^9.4.0",
-    "loader-utils": "0.2.15",
+    "loader-utils": "^1.0.4",
     "markdown-it": "^8.3.1",
     "markdown-it-anchor": "^4.0.0",
     "markdown-it-container": "^2.0.0",
