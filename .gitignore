@@ -6,4 +6,4 @@ build
 dist
 node_modules
 _cache
-
+.vscode

@@ -5,9 +5,9 @@
 </template>
 
 <script>
-import markdown from './markdown.md'
-import 'highlight.js/styles/github.css'
-import 'github-markdown-css'
+  import markdown from './markdown.md'
+  import 'highlight.js/styles/color-brewer.css'
+  import 'github-markdown-css'
 
 export default {
   components: {
@@ -15,6 +15,7 @@ export default {
   }
 }
 </script>
+
 <style>
   .markdown-body {
     box-sizing: border-box;

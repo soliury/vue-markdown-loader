@@ -1,5 +1,4 @@
-var path = require('path');
-var webpack = require('webpack');
+var path = require('path')
 
 module.exports = {
   entry: './src/entry.js',
@@ -16,7 +15,8 @@ module.exports = {
           loader: 'vue-loader',
           options: {
             loaders: {
-              scss: 'vue-style-loader!css-loader!sass-loader'
+              scss: 'vue-style-loader!css-loader!sass-loader',
+              css: 'vue-style-loader!css-loader'
             }
           }
         }]
@@ -28,7 +28,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'css-loader'
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.md$/,
@@ -47,9 +47,25 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    modules: [
+      'node_modules'
+    ]
+  },
   devServer: {
     historyApiFallback: true,
-    noInfo: true
+    noInfo: true,
+    host: '127.0.0.1',
+    port: 8888,
+    stats: {
+      colors: true,
+      modules: false,
+      children: false,
+      chunks: false,
+      chunkModules: false
+    },
+    hot: true,
+    inline: true
   },
-  devtool: '#eval-source-map'
-};
+  devtool: '#eval'
+}
