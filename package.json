@@ -1,6 +1,6 @@
 {
-  "name": "vue-markdown-loader",
-  "version": "0.6.2",
+  "name": "vue-component-markdown-loader",
+  "version": "0.0.1",
   "description": "markdown file to vue component loader.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/QingWei-Li/vue-markdown-loader.git"
+    "url": "git+https://github.com/soliury/vue-markdown-loader"
   },
   "keywords": [
     "vue",
@@ -19,9 +19,9 @@
   "author": "qingwei-li <qingwei.li@gmail.com>",
   "license": "WTFPL",
   "bugs": {
-    "url": "https://github.com/QingWei-Li/vue-markdown-loader/issues"
+    "url": "https://github.com/soliury/vue-markdown-loader/issues"
   },
-  "homepage": "https://github.com/QingWei-Li/vue-markdown-loader#readme",
+  "homepage": "https://github.com/soliury/vue-markdown-loader#readme",
   "dependencies": {
     "cheerio": "^0.20.0",
     "highlight.js": "^9.4.0",
